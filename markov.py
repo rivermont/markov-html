@@ -28,9 +28,6 @@ print('Reading huge_text.txt')
 with open('huge_text.txt', 'r') as f:
 	model = markovify.Text(f, retain_original=False)
 
-# print('Creating model...')
-# model = markovify.NewlineText(text)
-
 print('Saving model to model.json')
 with open('model.json', 'w+') as f:
 	f.write(model.to_json())
