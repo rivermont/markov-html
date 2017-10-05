@@ -6,7 +6,7 @@ import markovify
 a = 0  # Number of total lines in all files
 b = -1  # Number of files
 
-path = 'C:/Users/Will Bennett/Documents/Code/web-crawler/saved/'
+path = input('Folder to get pages from: ')
 # path = 'files/'
 
 with open('text.txt', 'w+') as f:
