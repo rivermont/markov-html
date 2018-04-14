@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from os import listdir
 from shutil import copyfileobj
 import markovify
@@ -6,8 +7,8 @@ import markovify
 a = 0  # Number of total lines in all files
 b = -1  # Number of files
 
-path = input('Folder to get pages from: ')
-# path = 'files/'
+# path = input('Folder to get pages from: ')
+path = 'files/'
 
 with open('text.txt', 'w+') as f:
     results = listdir(path)
@@ -24,8 +25,8 @@ with open('text.txt', 'w+') as f:
             except FileNotFoundError:
                 print('Invalid file name "{0}"'.format(file))
 
-print('Reading huge_text.txt')
-with open('huge_text.txt', 'r') as f:
+print('Reading text.txt')
+with open('text.txt', 'r') as f:
     model = markovify.Text(f, retain_original=False)
 
 print('Saving model to model.json')
